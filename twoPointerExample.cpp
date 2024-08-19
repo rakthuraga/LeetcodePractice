@@ -4,13 +4,14 @@ std::vector<int> SortedCombine(std::vector<int>&,std::vector<int>& );
 int main() 
 { 
   std::vector<int> vector = {1,3,5,7,9};
-  std::vector<int> vectorTwo = {2,4,6,8};
+  std::vector<int> vectorTwo = {2,4,6,8,10,11};
 
   std::vector<int> finalVector = SortedCombine(vector, vectorTwo); 
   for(int i = 0; i < finalVector.size(); i++)
   {
     std::cout << finalVector[i];
   }
+  std::cout << std::endl;
 }
 
 std::vector<int> SortedCombine(std::vector<int>& vecOne,std::vector<int>& vecTwo)
@@ -40,6 +41,19 @@ std::vector<int> SortedCombine(std::vector<int>& vecOne,std::vector<int>& vecTwo
     
   }
 
+  while(i < vecOne.size())
+  {
+    finalAnswer.push_back(vecOne[i]);
+    i++;
+  }
+
+  while(j < vecTwo.size())
+  {
+    finalAnswer.push_back(vecTwo[j]);
+    j++;
+  }
+
 
   return finalAnswer;
 }
+
