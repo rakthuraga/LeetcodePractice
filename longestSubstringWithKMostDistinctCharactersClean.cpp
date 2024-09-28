@@ -9,7 +9,7 @@ int findLongestSubstring(string s, int k) {
             if (counts[s[left]] == 0) {
                 counts.erase(s[left]);
             }
-            left++;
+            left+;
         }
         
         ans = max(ans, right - left + 1);
